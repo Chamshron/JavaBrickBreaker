@@ -45,7 +45,10 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {}
+    public void actionPerformed(ActionEvent e) {
+        timer.start();
+        repaint();
+    }
 
     @Override
     public void keyTyped(KeyEvent e) {}
@@ -72,7 +75,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
         play = true;
         playerX += 20;
     }
-    
+
     public void moveLeft() {
         play = true;
         playerX -= 20;
