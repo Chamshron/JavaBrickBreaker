@@ -32,6 +32,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
     public void paint(Graphics g) {
         g.setColor(Color.black);
         g.fillRect(1, 1, 692, 592);
+
         map.draw((Graphics2D) g);
 
         // borders of frame
@@ -39,6 +40,10 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
         g.fillRect(0, 0, 3, 592);
         g.fillRect(0, 0, 692, 3);
         g.fillRect(691, 0, 3, 592);
+
+        g.setColor(Color.white);
+        g.setFont(new Font("arial", Font.BOLD, 25));
+        g.drawString("" + score, 590, 30);
 
         // the paddle the ball hits
         g.setColor(Color.green);
